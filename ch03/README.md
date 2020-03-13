@@ -59,15 +59,91 @@ DB테이블명: 디폴트 "앱이름_모델명"
 
 
 
-02- 장고 모델 필드
+**02- 장고 모델 필드**
+
+Primary Key: AutoField, BigAutoField
+
+문자열: CharField, TextField, SlugField
+
+날짜/시간: DateField, TimeField, DateTimeField, DurationField
+
+참/거짓: BooleanField, NullBooleanField
+
+숫자: IntegerField, SmallIntegerField, PositiveIntegerField, PositiveSmallIntegerField, BigIntegerField, DecimalField, FloatField
+
+파일: BinaryField, FileField, ImageField, FilePathField
+
+이메일: EmailField
+
+URL: URLField
+
+UUID: UUIDField
+
+아이피: GenericIPAddressField
+
+Relationship Types: ForeignKey, ManyToManyField, OneToOneField
+
+그리고 다양한 커스텀 필드들,,
 
 
 
+* 자주 쓰는 필드 공통 옵션
+
+**blank**: 장고 단에서 validation시에 empty 허용 여부 (디폴트: False)
+
+null (DB옵션): null 허용 여부 (디폴트:Flase)
+
+db_index (DB옵션): 인덱스 필드 여부 (디폴트:Flase)
+
+default: 디폴트 값 지정, 혹은 값을 리턴해줄 함수 지정
+
+unique(DB 옵션): 현재 테이블 내에서 유일성 여부 (디폴트:Flase)
+
+choices: select 박스 소스로 사용
+
+**validators**: validators를 수행할 함수를 다수 지정
+
+verbose_name: 필드 레이블, 미지정시 필드명이 사용
+
+help_text: 필드 입력 도움말
 
 
-03- 장고 admin을 통한 데이터 관리
+
+**03- 장고 admin을 통한 데이터 관리**
+
+django.contrib.admin 앱을 통해 django admin 제공
+
+프로젝트(최상단) urls.py를 가면 admin주소가 할당되어있음
+
+django-admin-honeypot 앱을 통해 가짜 admin 노출 가능
 
 
+
+모델 클래스 등록을 통해서, 조회/추가/수정/삭제 웹UI를 제공
+
+서비스 초기에 관리도구로서 사용하기에 제격!
+
+
+
+java의 toString
+
+django에서는 -> \_\_str\_\_ 이용
+
+![image-20200313210446965](C:\Users\beomwoo\AppData\Roaming\Typora\typora-user-images\image-20200313210446965.png)
+
+
+
+list_display 속성
+
+![image-20200313210642083](C:\Users\beomwoo\AppData\Roaming\Typora\typora-user-images\image-20200313210642083.png)
+
+
+
+search_fields 속성 정의 - admin내 검색UI를 통해, DB를 통한 where 쿼리 대상 필드 리스트
+
+
+
+list_filter 속성 정의 - 지정 필드값으로 필터링 옵션 제공
 
 
 
