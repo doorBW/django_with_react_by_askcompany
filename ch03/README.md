@@ -269,11 +269,17 @@ settings.MEDIA_ROOT 하위에서 저장한 파일명/경로명 결정
 
 
 
+**05- 장고 쉘**
 
+* python Interactive Shell
 
-05- 장고 쉘
+기본 파이썬 쉘
 
+IPython: https://ipython.org
 
+Jupyter Notebook with Python Kernel
+
+BPython: https://bpython-interpreter.org
 
 
 
