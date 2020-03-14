@@ -283,7 +283,68 @@ BPython: https://bpython-interpreter.org
 
 
 
-06- 모델을 통한 조회 (기초)
+**06- 모델을 통한 조회 (기초)**
+
+* Model Manage
+
+데이터베이스 질의 인터페이스를 제공
+
+디폴트 Manager로서 modelCls.objects 가 제공
+
+ModelCls.objects.all() \# 생성되는 대강의 SQL 윤곽: SELECT * FROM app_model;
+
+ModelCls.object.all().order_by('-id')[:10] # SELECT * FROM app_model ORDER BY id DESC LIMIT 10;
+
+ModelCls.objects.create(title='New Title') # INSERT INTO app_model (title) VALUES ("New Title")
+
+
+
+-> jupyter notebook을 통해 확인(루트폴더에 jupyter_practice라고 저장함)
+
+
+
+* QuerySet은 Chaining을 지원
+
+QuerySet은 Lazy한 특성. -> QuerySet을 만드는 동안에는 DB접근을 하지 않고, 실제로 데이터가 필요한 시점에 접근을 한다.
+
+* 데이터가 필요한 시점은?
+
+1. queryset
+2. print(queryset)
+3. list(queryset)
+4. for instance in queryset: print(instance)
+
+
+
+* 다양한 조회 요청 방법
+
+**조건을 추가한 Queryset, 획득할 준비**
+
+queryset.filter(...) 
+
+queryset.exclude(...)
+
+**특정 모델 객체 1개 획득을 시도**
+
+queryset[숫자인덱스] -> 모델 객체 혹은 예외 발생(IndexError)
+
+queryset.get(...) -> 모델 객체 혹은 예외발생(DoesNotExist, MultipleObjectsReturned)
+
+queryset.first() -> 모델객체 혹은 None
+
+queryset.last() -> 모델객체 혹은 None
+
+
+
+* filter <-> exclude
+
+인자로 "필드명 = 조건값" 지정
+
+1개 이상의 인자 지정 -> 모두 AND 조건으로 묶임
+
+OR조건을 묶으려면, django.db.models.Q 활용
+
+![image-20200314225546785](C:\Users\beomwoo\AppData\Roaming\Typora\typora-user-images\image-20200314225546785.png)
 
 
 
