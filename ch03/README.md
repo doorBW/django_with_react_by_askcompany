@@ -147,7 +147,125 @@ list_filter 속성 정의 - 지정 필드값으로 필터링 옵션 제공
 
 
 
-04- 장고가 media 파일을 다루는 방법
+**04- 장고가 media 파일을 다루는 방법**
+
+**Static & Media 파일**
+
+* static 파일
+
+개발 리소스로서의 정적인 파일(js, css, image 등)
+
+앱/프로젝트 단위로 저장/서빙
+
+* Media 파일
+
+FileField/ImageField를 통해 저장한 모든 파일
+
+DB필드에는 저장경로를 저장하며, 파일은 파일 스토리지에 저장
+
+프로젝트 단위로 저장/서빙
+
+
+
+\# pillow 라이브러리 설치
+
+pip install pillow
+
+
+
+ImageField 내부적으로 pillow를 사용하기 때문에 설치가 필요함
+
+
+
+requirements.txt -> 설치한 라이브러리를 적어서 관리할 수 있음
+
+=> pip install -r requirements.txt
+
+
+
+* Media 파일 처리 순서
+
+1. HttpRequest.FILES를 통해 파일이 전달
+
+2. 뷰 로직이나 폼 로직을 통해, 유효성 검증을 수행한다.
+3. FileField/ImageField 필드에 "경로(문자열)"를 저장하고.
+4. settings.MEDIA_ROOT 경로에 파일을 저장합니다.
+
+
+
+* Media 파일, 관련 settings 예시
+
+각 설정의 디폴트 값
+
+MEDIA_URL = "" => 각 media 파일에 대한 URL Prefix, 필드명.url 속성에 의해서 참조되는 설정
+
+MEDIA_ROOT = "" => 파일필드를 통한 저장 시에, 실제 파일을 저장할 ROOT 경로
+
+
+
+* 기본 세팅
+
+![image-20200314211913416](C:\Users\beomwoo\AppData\Roaming\Typora\typora-user-images\image-20200314211913416.png)
+
+
+
+* FileField와 ImageField
+
+**FileField**
+
+Fiel Storage API를 통해 파일을 저장
+
+장고에서는 File System Storage만 지원. Django-storages를 통해 확장 지원.
+
+해당 필드를 옵션 필드로 두고자 할 경우, blank=True 옵션 적용
+
+**ImageField**(FileField 상속)
+
+Pillow(이미지 처리 라이브러리)를 통해 이미지 width/height 획득
+
+Pillow 미설치 시에, ImageField를 추가한 makemigrations 수행에 실패합니다.
+
+**위 필드를 상속받은 커스텀 필드를 만들 수도 있다.** ex) PDFField, ExcelField 등
+
+
+
+media_url -> 파일 접근
+
+media_root -> 파일 저장
+
+
+
+* 사용할 만한 필드 옵션
+
+**blank 옵션**
+
+업로드 옵션처리 여부, 디폴트: Flase
+
+**upload_to옵션**
+
+settings.MEDIA_ROOT 하위에서 저장한 파일명/경로명 결정
+
+디폴트: 파일명 그대로 settings.MEDIA_ROOT에 저장
+
+추천) 성능을 위해, 한 디렉토리에 너무 많은 파일들이 저장되지 않도록 조정하기
+
+동일 파일명으로 저장 시에, 파일명에 더미 문자열을 붙여 파일 덮어쓰기 방지
+
+
+
+* 파일 업로드 시에 HTML Form enctype
+
+![image-20200314213433494](C:\Users\beomwoo\AppData\Roaming\Typora\typora-user-images\image-20200314213433494.png)
+
+-> 추후 form 쪽에서 다시 설명
+
+
+
+* upload_to 인자
+
+파일 저장 시에 upload_to 함수를 호출하여, 저장 경로를 계산
+
+![image-20200314213630719](C:\Users\beomwoo\AppData\Roaming\Typora\typora-user-images\image-20200314213630719.png)
 
 
 
