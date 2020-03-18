@@ -350,13 +350,76 @@ OR조건을 묶으려면, django.db.models.Q 활용
 
 
 
-07- Queryset을 통한 간단 검색 구현
+**07- Queryset을 통한 간단 검색 구현**
+
+실습) Item 목록/간단검색페이지
 
 
 
+**08- Queryset의 정렬 및 범위 조건**
+
+* 정렬 조건 추가
+
+정렬 조건을 추가하지 않으면 일관된 순서 보장받을 수 없음.
+
+정렬 조건을 지정하는 2가지 방법
+
+1. (추천) 모델 클래스의 Meta 속성으로 ordering 설정 : list로 설정
+2. 모든 queryset에 order_by(...) 에 지정
 
 
-08- Queryset의 정렬 및 범위 조건
+
+1 ->
+
+![image-20200318130923824](C:\Users\beomwoo\AppData\Roaming\Typora\typora-user-images\image-20200318130923824.png)
+
+위와 같이 model에 Meta 클래스를 통해 ordering을 지정해주니,
+
+![image-20200318130945512](C:\Users\beomwoo\AppData\Roaming\Typora\typora-user-images\image-20200318130945512.png)
+
+이렇게 기본 조회 쿼리에 order by가 적용된 것을 볼 수 있다.
+
+하지만 아래와 같이 order_by를 직접 추가하면
+
+![image-20200318131041044](C:\Users\beomwoo\AppData\Roaming\Typora\typora-user-images\image-20200318131041044.png)
+
+디폴트 정렬이 무시된다
+
+
+
+* 슬라이싱을 통한 범위조건 추가
+
+str/list/tuple에서의 슬라이싱과 거의 유사하지만, 음수 인덱싱 접근은 지원 안함
+
+객체[start:stop:step]
+
+step이 없을 때 위 코드의 반환값은 queryset이지만,
+
+step이 들어가는 순간 반환값은 list다
+
+
+
+09- django-debug-toolbar를 통한 SQL 디버깅
+
+
+
+10- 관계를 표현하는 모델 필드(ForeignKey)
+
+
+
+11- 관계를 표현하는 모델 필드(OneToOneField)
+
+
+
+12- 관계를 표현하는 모델 필드(ManyToManyField)
+
+
+
+13- 마이그레이션을 통한 데이터베이스 스키마 관리(1)
+
+
+
+14- 마이그레이션을 통한 데이터베이스 스키마 관리(2)
 
 
 
