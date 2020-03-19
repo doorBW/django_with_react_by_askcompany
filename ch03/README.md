@@ -523,7 +523,19 @@ User:Profile 을 O2O로 지정한다면 -> profile.user -> user
 
 
 
-12- 관계를 표현하는 모델 필드(ManyToManyField)
+**12- 관계를 표현하는 모델 필드(ManyToManyField)**
+
+ManyToManyField(to, blank=False)
+
+M:N 관계에서 어느쪽이라도 필드 지정 가능
+
+
+
+DB Browser for SQLite 사용
+
+
+
+RDBMS지만, DB에 따라 NoSQL기능도 지원
 
 
 
