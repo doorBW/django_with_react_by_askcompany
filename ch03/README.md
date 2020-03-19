@@ -399,7 +399,41 @@ step이 들어가는 순간 반환값은 list다
 
 
 
-09- django-debug-toolbar를 통한 SQL 디버깅
+**09- django-debug-toolbar를 통한 SQL 디버깅**
+
+* django-debug-toolbar (third party)
+
+현재 req/res에 대한 다양한 디버깅 정보를 보여줌.
+
+SQLPanel을 통해 각 요청 처리시에 발생한 SQL 내역 확인가능
+
+비동기(ajax) 요청에 대한 지원 불가
+
+
+
+공식 문서: https://django-debug-toolbar.readthedocs.io/en/latest/
+
+pip install django-debug-toolbar
+
+pip 설치후 settings와 프로젝트 urls 설정
+
+
+
+세팅이 정상적으로 끝나면 웹 화면상 우측에 툴바가 생김.
+
+![image-20200318144352984](C:\Users\beomwoo\AppData\Roaming\Typora\typora-user-images\image-20200318144352984.png)
+
+해당 패널들 중에 아래와 같이 SQL 쿼리등을 볼 수 있음.
+
+![image-20200318144412497](C:\Users\beomwoo\AppData\Roaming\Typora\typora-user-images\image-20200318144412497.png)
+
+
+
+* 그외: django-querycount
+
+SQL 실행내역을 개발서버 콘솔에 표준 출력.
+
+ajax내역도 출력 가능
 
 
 
