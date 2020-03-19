@@ -437,7 +437,75 @@ ajax내역도 출력 가능
 
 
 
-10- 관계를 표현하는 모델 필드(ForeignKey)
+**10- 관계를 표현하는 모델 필드(ForeignKey)**
+
+ORM은 어디까지나 SQL 생성을 도와주는 라이브러리.
+
+* 1:N 관계 => models.ForeignKey
+* 1:1 관계 => models.OneToOneField
+* M:N 관계 => models.ManyToManyField
+
+
+
+**ForeignKey**
+
+ex) Post:Comment, User:Post, User:Comment
+
+ForeignKey(to, on_delete)
+
+to: 대상 모델
+
+-> 클래스를 직접 지정하거나, 클래스명을 문자열로 지정. 자기 참조는 self 지정
+
+on_delete: Record 삭제 시 Rule
+
+-> CASCADE: FK로 참조하는 다른 모델의 Record도 삭제
+
+PROTECT: ProtectedError (IntegrityError 상속)를 발생시키며 삭제 방지
+
+SET_NULL: null로 대체. 필드에 null=True 옵션필수
+
+SET_DEFAULT: 디폴트 값으로 대체. 필드에 디폴트값 지정 필수
+
+SET:대체할 값이나 함수 지정. 함수의 경우 호출하여 리턴값을 사용
+
+DO_NOTHING: 어떠한 액션도 안한다. DB에 따라 오류가 발생할 수도 있다.
+
+
+
+* FK에서의 reverse_name
+
+reverse 접근 시의 속성명: 디폴트 -> "모델명소문자_set"
+
+ex)
+
+![image-20200319112100146](C:\Users\beomwoo\AppData\Roaming\Typora\typora-user-images\image-20200319112100146.png)
+
+
+
+**reverse_name 이름 충돌이 발생하면?**
+
+-> reverse_name은 app이름 고려x, 모델명만 고려하기 때문에 충돌날 수 있음
+
+이름이 충돌이 날 때, makemigrations 명령이 실패
+
+-> 1. 어느 한쪽의 FK에 대해, reverse_name을 포기: related_name='+'
+
+2. 어느 한쪽의 (혹은 모두) FK의 reverse_name을 변경
+
+ex)
+
+FK(User, ..., related_name='blog_post_set')
+
+FK(User, ..., related_name='shop_post_set')
+
+
+
+* ForeignKey.limit_choices_to 옵션
+
+Form을 통한 Choice 위젯에서 선택항목 제한 가능
+
+ManyToManyField 에서도 지원
 
 
 
