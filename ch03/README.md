@@ -509,7 +509,17 @@ ManyToManyField 에서도 지원
 
 
 
-11- 관계를 표현하는 모델 필드(OneToOneField)
+**11- 관계를 표현하는 모델 필드(OneToOneField)**
+
+* OneToOneField(to, on_delete)
+
+1:1 관계에서 어느쪽이라도 가능
+
+ForeignKey(unique=True)와 유사하지만, reverse 차이
+
+User:Profile 을 FK로 지정한다면 -> profile.user_set.first() -> user
+
+User:Profile 을 O2O로 지정한다면 -> profile.user -> user
 
 
 
