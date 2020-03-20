@@ -539,7 +539,71 @@ RDBMS지만, DB에 따라 NoSQL기능도 지원
 
 
 
-13- 마이그레이션을 통한 데이터베이스 스키마 관리(1)
+**13- 마이그레이션을 통한 데이터베이스 스키마 관리(1)**
+
+* Migrations
+
+모델의 변경내역을 "데이터베이스 스키마"로 반영시키는 효율적인 방법을 제공
+
+마이그레이션 파일 생성
+
+python manage.py makemigrations <앱이름>
+
+저장 데이터베이스에 마이그레이션 적용
+
+python manage.py migrate <앱이름>
+
+마이그레이션 적용 현황 출력
+
+python manage.py showmigrations <앱이름>
+
+저장 마이그레이션의 SQL 내역 출력
+
+python manage.py sqlmigrate <앱이름> <마이그레이션-이름>
+
+
+
+* Migration 파일
+
+데이터베이스에 어떤 변화를 가하는 Operation들을 나열
+
+**주의) 같은 Migration 파일이라 할지라도, DB종류에 따라 다른 SQL이 생성됨.**
+
+
+
+![image-20200320200156579](C:\Users\beomwoo\AppData\Roaming\Typora\typora-user-images\image-20200320200156579.png)
+
+
+
+* 언제 makemigrations를 하는가?
+
+모델 필드 관련된 어떠한 변경이라도 발생 시에 마이그레이션 파일 생성을 한다.
+
+실제로 DB Scheme에 가해지는 변화가 없더라도 수행.
+
+-> 마이그레이션 파일은 모델의 변경내역을 누적하는 역할!
+
+적용된 마이그레이션 파일은 절대 삭제하면 안된다.
+
+마이그레이션 파일이 많아지면 squashmigrations 명령으로 다수의 마이그레이션 파일을 통합할 수 있다.
+
+
+
+python manage.py migrate <앱이름>
+
+미적용 <마이그레이션-파일>부터 <최근-마이그레이션-파일>까지 정방향으로 순차적으로 수행
+
+python manage.py migrate <앱이름> <마이그레이션-이름>
+
+지정된 <마이그레이션-이름>이 현재 적용된 마이그레이션보다
+
+**이후라면,** 정방향으로 순차적으로 지정 마이그레이션까지 정방향 수행
+
+**이전이라면,** 역방향으로 순차적으로 지정된 마이그레이션까지 역방향 수행
+
+
+
+![image-20200320200746659](C:\Users\beomwoo\AppData\Roaming\Typora\typora-user-images\image-20200320200746659.png)
 
 
 
