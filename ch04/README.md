@@ -59,7 +59,43 @@ str 문자열을 직접 utf8로 인코딩할 필요가 없다.
 
 
 
-02- 다양한 응답의 함수 기반 뷰(2)
+**02- 다양한 응답의 함수 기반 뷰(2)**
+
+- 다양한 타입의 HttpResponse
+
+**Excel 파일 다운로드 응답**
+
+파일객체를 그대로 전달하면 된다.
+
+![image-20200320222153564](C:\Users\beomwoo\AppData\Roaming\Typora\typora-user-images\image-20200320222153564.png)
+
+
+
+**pandas를 통한 CSV 응답 생성**
+
+![image-20200320222301414](C:\Users\beomwoo\AppData\Roaming\Typora\typora-user-images\image-20200320222301414.png)
+
+
+
+**pandas를 통한 엑셀 응답 생성**
+
+![image-20200320222504292](C:\Users\beomwoo\AppData\Roaming\Typora\typora-user-images\image-20200320222504292.png)
+
+
+
+**pillow를 통한 이미지 응답 생성 - 기본**
+
+![image-20200320222620557](C:\Users\beomwoo\AppData\Roaming\Typora\typora-user-images\image-20200320222620557.png)
+
+
+
+**pillow를 통한 이미지 응답 생성 - View**
+
+![image-20200320222819403](C:\Users\beomwoo\AppData\Roaming\Typora\typora-user-images\image-20200320222819403.png)
+
+
+
+
 
 
 
