@@ -201,7 +201,35 @@ as_view()  클래스 함수를 통해 view 함수를 생성
 
 
 
-05- 장고 기본 CBV API (Base Views)
+**05- 장고 기본 CBV API (Base Views)**
+
+- Built-in CBV API
+
+**Base views**
+
+- View
+
+모든 CBV의 모체, 직접 사용할 일은 x
+
+http method별로 지정이름의 멤버함수를 호출토록 구현
+
+- TemplateView
+
+ContextMixin
+
+TemplateResponseMixin: 직접 사용x 
+
+TemplateView
+
+- RedirectView
+
+
+
+**Generic display views**
+
+**Generic date views**
+
+**Generic editing views**
 
 
 
