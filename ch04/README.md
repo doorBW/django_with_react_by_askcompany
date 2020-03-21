@@ -95,11 +95,61 @@ str 문자열을 직접 utf8로 인코딩할 필요가 없다.
 
 
 
+**03- URL Dispatcher와 정규 표현식**
+
+* URL Dispatcher
+
+특정 URL 패턴 -> View의 List
+
+프로젝트 /settings.py에서 최상위 URLConf모듈을 지정
+
+HTTP요청이 들어왔을 때, 등록된 urlpatterns상의 매핑 리스를 **처음부터 순차적**으로 훑으며 URL매칭을 시도
+
+-> 매칭이 되는 URL Rule이 다수 존재하더라도, 제일 처음 만나는 Rule에만 적용됨.
+
+-> 매칭되는 URL Rule이 없으면, 404 Page Not Found 응답을 발생
 
 
 
+* path()와 re_path()의 등장
 
-03- URL Dispatcher와 정규 표현식
+django.urls.re_path() -> Django.conf.urls.url()과 동일
+
+Django.urls.path() -> 기본 지원되는 Path converters를 통해 정규표현식 기입이 간소화(만능은 아님!)
+
+-> 자주 사용되는 패턴을 Converter로 등록하면 재활용면에서 편리하다.
+
+* 기본 제공되는 Path Converters
+
+IntConverter
+
+StringConverter
+
+UUIDConverter
+
+SlugConverter (StringConverter 상속)
+
+PathConverter (StringConverter 상속)
+
+
+
+* 정규 표현식
+
+거의 모든 프로그래밍 언어에서 지원
+
+문자열의 패턴, 규칙, Rule 을 정의하는 방법
+
+문자열 검색이나 치환작업을 간편하게 처리
+
+장고 URL Dispatcher에서는 정규표현식을 통한 URL 매칭
+
+
+
+* 커스텀 Path Converter
+
+-> instagram/urls.py 실습 진행
+
+
 
 
 

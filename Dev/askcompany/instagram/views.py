@@ -1,5 +1,6 @@
 from django.views.generic import ListView
 from django.shortcuts import render
+from django.http import HttpResponse
 from .models import Post
 # Create your views here.
 
@@ -17,7 +18,7 @@ post_list = ListView.as_view(model=Post)
 #     return render(request, 'instagram/post_list.html', {
 #         'post_list': qs,
 #         'q': q,
-    })
+#      })
 
 def post_detail(request, pk):
     response = HttpResponse()
@@ -25,3 +26,6 @@ def post_detail(request, pk):
     response.write("Hello World")
     response.write("Hello World")
     return response
+
+def archives_year(request,year):
+    return HttpResponse(f"{year}년 archives")
