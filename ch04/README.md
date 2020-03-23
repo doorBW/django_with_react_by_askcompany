@@ -253,7 +253,7 @@ CBV의 DetailView에서 get_queryset 커스텀
 
 
 
-
+07- 장고 기본 CBV API (Generic display views) (2)
 
 2. ListView
 
@@ -261,9 +261,21 @@ CBV의 DetailView에서 get_queryset 커스텀
 
 <- BaseListView
 
+1개 모델에 대한 List 템플릿 처리
+
+모델명소문자_list 이름의 QuerySet을 템플릿에 전달
+
+페이징 처리 지원
 
 
-07- 장고 기본 CBV API (Generic display views) (2)
+
+![image-20200323172351493](../images/image-20200323172351493.png)
+
+![image-20200323172358890](../images/image-20200323172358890.png)
+
+
+
+
 
 
 

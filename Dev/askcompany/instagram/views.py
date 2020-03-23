@@ -4,7 +4,7 @@ from django.http import HttpResponse, HttpRequest, Http404
 from .models import Post
 # Create your views here.
 
-post_list = ListView.as_view(model=Post)
+post_list = ListView.as_view(model=Post, paginate_by=10)
 
 # def post_list(request):
 #     qs = Post.objects.all()
