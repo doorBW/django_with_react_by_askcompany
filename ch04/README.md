@@ -55,7 +55,7 @@ str 문자열을 직접 utf8로 인코딩할 필요가 없다.
 
 
 
-![image-20200320213656153](../images/image-20200320213656153.png)
+![image-20200320213656153](C:\Users\beomwoo\AppData\Roaming\Typora\typora-user-images\image-20200320213656153.png)
 
 
 
@@ -67,47 +67,169 @@ str 문자열을 직접 utf8로 인코딩할 필요가 없다.
 
 파일객체를 그대로 전달하면 된다.
 
-![image-20200320222153564](../images/image-20200320222153564.png)
+![image-20200320222153564](C:\Users\beomwoo\AppData\Roaming\Typora\typora-user-images\image-20200320222153564.png)
 
 
 
 **pandas를 통한 CSV 응답 생성**
 
-![image-20200320222301414](../images/image-20200320222301414.png)
+![image-20200320222301414](C:\Users\beomwoo\AppData\Roaming\Typora\typora-user-images\image-20200320222301414.png)
 
 
 
 **pandas를 통한 엑셀 응답 생성**
 
-![image-20200320222504292](../images/image-20200320222504292.png)
+![image-20200320222504292](C:\Users\beomwoo\AppData\Roaming\Typora\typora-user-images\image-20200320222504292.png)
 
 
 
 **pillow를 통한 이미지 응답 생성 - 기본**
 
-![image-20200320222620557](../images/image-20200320222620557.png)
+![image-20200320222620557](C:\Users\beomwoo\AppData\Roaming\Typora\typora-user-images\image-20200320222620557.png)
 
 
 
 **pillow를 통한 이미지 응답 생성 - View**
 
-![image-20200320222819403](../images/image-20200320222819403.png)
+![image-20200320222819403](C:\Users\beomwoo\AppData\Roaming\Typora\typora-user-images\image-20200320222819403.png)
 
 
 
+**03- URL Dispatcher와 정규 표현식**
+
+* URL Dispatcher
+
+특정 URL 패턴 -> View의 List
+
+프로젝트 /settings.py에서 최상위 URLConf모듈을 지정
+
+HTTP요청이 들어왔을 때, 등록된 urlpatterns상의 매핑 리스를 **처음부터 순차적**으로 훑으며 URL매칭을 시도
+
+-> 매칭이 되는 URL Rule이 다수 존재하더라도, 제일 처음 만나는 Rule에만 적용됨.
+
+-> 매칭되는 URL Rule이 없으면, 404 Page Not Found 응답을 발생
 
 
 
+* path()와 re_path()의 등장
 
-03- URL Dispatcher와 정규 표현식
+django.urls.re_path() -> Django.conf.urls.url()과 동일
+
+Django.urls.path() -> 기본 지원되는 Path converters를 통해 정규표현식 기입이 간소화(만능은 아님!)
+
+-> 자주 사용되는 패턴을 Converter로 등록하면 재활용면에서 편리하다.
+
+* 기본 제공되는 Path Converters
+
+IntConverter
+
+StringConverter
+
+UUIDConverter
+
+SlugConverter (StringConverter 상속)
+
+PathConverter (StringConverter 상속)
 
 
 
-04- 클래스 기반 뷰 시작하기
+* 정규 표현식
+
+거의 모든 프로그래밍 언어에서 지원
+
+문자열의 패턴, 규칙, Rule 을 정의하는 방법
+
+문자열 검색이나 치환작업을 간편하게 처리
+
+장고 URL Dispatcher에서는 정규표현식을 통한 URL 매칭
 
 
 
-05- 장고 기본 CBV API (Base Views)
+* 커스텀 Path Converter
+
+-> instagram/urls.py 실습 진행
+
+
+
+**04- 클래스 기반 뷰 시작하기**
+
+* View
+
+함수 기반 뷰(Function Based View)
+
+-> View 구현의 기본! FBC로 구현할 줄 알아야 응용이 가능하다.
+
+공통기능들은 장식자 문법으로 적용
+
+클래스 기반 뷰(Class Based View)
+
+공통 기능들은 상속 문법으로 적용
+
+
+
+* Class Based View
+
+**View 함수를 만들어주는 클래스**
+
+as_view()  클래스 함수를 통해 view 함수를 생성
+
+상속을 통해, 여러 기능들을 믹스인
+
+
+
+**CBV 컨셉 구현해보기**
+
+\#1. FBV
+
+
+
+\#2. 함수를 통해, 동일한 View 함수 생성
+
+
+
+\#3. Class로 동일한 View 함수 구현
+
+
+
+\#4. 장고 기본 제공 CBV 활용
+
+
+
+**CBV는 정한 관례대로 개발할 경우, 아주 적은 양의 코드로 구현 가능**
+
+그 관례에 대한 이해가 필요 -> FBV를 통한 개발 경험이 큰 도움.
+
+
+
+**05- 장고 기본 CBV API (Base Views)**
+
+- Built-in CBV API
+
+**Base views**
+
+- View
+
+모든 CBV의 모체, 직접 사용할 일은 x
+
+http method별로 지정이름의 멤버함수를 호출토록 구현
+
+- TemplateView
+
+ContextMixin
+
+TemplateResponseMixin: 직접 사용x 
+
+TemplateView
+
+- RedirectView
+
+
+
+**Generic display views**
+
+**Generic date views**
+
+**Generic editing views**
 
 
 
