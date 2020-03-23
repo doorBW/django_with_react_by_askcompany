@@ -27,10 +27,26 @@ post_list = ListView.as_view(model=Post)
 #     # except Post.DoesNotExist:
 #     #     raise Http404
 #     return render(request, 'instagram/post_detail.html',{
-#         'post': post,
+#         'post': post, # or 'object': post, 
 #     })
 
-post_detail = DetailView.as_view(model=Post)
+# post_detail = DetailView.as_view(
+#     model=Post,
+#     queryset=Post.objects.filter(is_public=True))
+
+class PostDetailView(DetailView):
+    model = Post
+    # queryset = Post.object.filter(is_public=True)
+
+    def get_queryset(self):
+        qs = super().get_queryset()
+        if not self.request.user.is_authenticated:
+            qs = qs.filter(is_public=True)
+        return qs
+
+post_detail = PostDetailView.as_view()
+
+
 
 def archives_year(request,year):
     return HttpResponse(f"{year}년 archives")

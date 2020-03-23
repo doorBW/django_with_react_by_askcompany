@@ -235,6 +235,32 @@ TemplateView
 
 06- 장고 기본 CBV API (Generic display views) (1)
 
+1. DetailView
+
+<- SingleObjectTemplateResponseMixin
+
+<- BaseDetailView
+
+1개 모델의 1개 object에 대한 템플릿 처리
+
+모델명 소문자 이름의 Model Instance를 템플릿에 전달
+
+![image-20200323165020117](../images/image-20200323165020117.png)
+
+CBV의 DetailView에서 get_queryset 커스텀
+
+![image-20200323170638148](../images/image-20200323170638148.png)
+
+
+
+
+
+2. ListView
+
+<- MultipleObjectTemplateResponseMixin
+
+<- BaseListView
+
 
 
 07- 장고 기본 CBV API (Generic display views) (2)
