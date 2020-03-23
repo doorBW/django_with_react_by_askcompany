@@ -129,13 +129,13 @@ java의 toString
 
 django에서는 -> \_\_str\_\_ 이용
 
-![image-20200313210446965](C:\Users\beomwoo\AppData\Roaming\Typora\typora-user-images\image-20200313210446965.png)
+![image-20200313210446965](../images/image-20200313210446965.png)
 
 
 
 list_display 속성
 
-![image-20200313210642083](C:\Users\beomwoo\AppData\Roaming\Typora\typora-user-images\image-20200313210642083.png)
+![image-20200313210642083](../images/image-20200313210642083.png)
 
 
 
@@ -205,7 +205,7 @@ MEDIA_ROOT = "" => 파일필드를 통한 저장 시에, 실제 파일을 저장
 
 * 기본 세팅
 
-![image-20200314211913416](C:\Users\beomwoo\AppData\Roaming\Typora\typora-user-images\image-20200314211913416.png)
+![image-20200314211913416](../images/image-20200314211913416.png)
 
 
 
@@ -255,7 +255,7 @@ settings.MEDIA_ROOT 하위에서 저장한 파일명/경로명 결정
 
 * 파일 업로드 시에 HTML Form enctype
 
-![image-20200314213433494](C:\Users\beomwoo\AppData\Roaming\Typora\typora-user-images\image-20200314213433494.png)
+![image-20200314213433494](../images/image-20200314213433494.png)
 
 -> 추후 form 쪽에서 다시 설명
 
@@ -265,7 +265,7 @@ settings.MEDIA_ROOT 하위에서 저장한 파일명/경로명 결정
 
 파일 저장 시에 upload_to 함수를 호출하여, 저장 경로를 계산
 
-![image-20200314213630719](C:\Users\beomwoo\AppData\Roaming\Typora\typora-user-images\image-20200314213630719.png)
+![image-20200314213630719](../images/image-20200314213630719.png)
 
 
 
@@ -344,7 +344,7 @@ queryset.last() -> 모델객체 혹은 None
 
 OR조건을 묶으려면, django.db.models.Q 활용
 
-![image-20200314225546785](C:\Users\beomwoo\AppData\Roaming\Typora\typora-user-images\image-20200314225546785.png)
+![image-20200314225546785](../images/image-20200314225546785.png)
 
 
 
@@ -371,17 +371,17 @@ OR조건을 묶으려면, django.db.models.Q 활용
 
 1 ->
 
-![image-20200318130923824](C:\Users\beomwoo\AppData\Roaming\Typora\typora-user-images\image-20200318130923824.png)
+![image-20200318130923824](../images/image-20200318130923824.png)
 
 위와 같이 model에 Meta 클래스를 통해 ordering을 지정해주니,
 
-![image-20200318130945512](C:\Users\beomwoo\AppData\Roaming\Typora\typora-user-images\image-20200318130945512.png)
+![image-20200318130945512](../images/image-20200318130945512.png)
 
 이렇게 기본 조회 쿼리에 order by가 적용된 것을 볼 수 있다.
 
 하지만 아래와 같이 order_by를 직접 추가하면
 
-![image-20200318131041044](C:\Users\beomwoo\AppData\Roaming\Typora\typora-user-images\image-20200318131041044.png)
+![image-20200318131041044](../images/image-20200318131041044.png)
 
 디폴트 정렬이 무시된다
 
@@ -421,11 +421,11 @@ pip 설치후 settings와 프로젝트 urls 설정
 
 세팅이 정상적으로 끝나면 웹 화면상 우측에 툴바가 생김.
 
-![image-20200318144352984](C:\Users\beomwoo\AppData\Roaming\Typora\typora-user-images\image-20200318144352984.png)
+![image-20200318144352984](../images/image-20200318144352984.png)
 
 해당 패널들 중에 아래와 같이 SQL 쿼리등을 볼 수 있음.
 
-![image-20200318144412497](C:\Users\beomwoo\AppData\Roaming\Typora\typora-user-images\image-20200318144412497.png)
+![image-20200318144412497](../images/image-20200318144412497.png)
 
 
 
@@ -479,7 +479,7 @@ reverse 접근 시의 속성명: 디폴트 -> "모델명소문자_set"
 
 ex)
 
-![image-20200319112100146](C:\Users\beomwoo\AppData\Roaming\Typora\typora-user-images\image-20200319112100146.png)
+![image-20200319112100146](../images/image-20200319112100146.png)
 
 
 
@@ -571,7 +571,7 @@ python manage.py sqlmigrate <앱이름> <마이그레이션-이름>
 
 
 
-![image-20200320200156579](C:\Users\beomwoo\AppData\Roaming\Typora\typora-user-images\image-20200320200156579.png)
+![image-20200320200156579](../images/image-20200320200156579.png)
 
 
 
@@ -603,7 +603,7 @@ python manage.py migrate <앱이름> <마이그레이션-이름>
 
 
 
-![image-20200320200746659](C:\Users\beomwoo\AppData\Roaming\Typora\typora-user-images\image-20200320200746659.png)
+![image-20200320200746659](../images/image-20200320200746659.png)
 
 
 
@@ -619,7 +619,7 @@ makemigrations 명령을 수행할 때, 기존 record들에 어떤 값을 채워
 
 선택2) 명령 수행을 중단
 
-![image-20200320202029336](C:\Users\beomwoo\AppData\Roaming\Typora\typora-user-images\image-20200320202029336.png)
+![image-20200320202029336](../images/image-20200320202029336.png)
 
 
 
