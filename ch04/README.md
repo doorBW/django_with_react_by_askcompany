@@ -233,7 +233,7 @@ TemplateView
 
 
 
-06- 장고 기본 CBV API (Generic display views) (1)
+**06- 장고 기본 CBV API (Generic display views) (1)**
 
 1. DetailView
 
@@ -253,7 +253,7 @@ CBV의 DetailView에서 get_queryset 커스텀
 
 
 
-07- 장고 기본 CBV API (Generic display views) (2)
+**07- 장고 기본 CBV API (Generic display views) (2)**
 
 2. ListView
 
@@ -279,7 +279,19 @@ CBV의 DetailView에서 get_queryset 커스텀
 
 
 
-08- 장고 기본 CBV API (Generic display views) (3)
+**08- 장고 기본 CBV API (Generic display views) (3)**
+
+django bootstrap4(https://django-bootstrap4.readthedocs.io/en/latest/#)    
+
+설치   
+
+pip install django-bootstrap4   
+
+   
+
+사용
+
+![image-20200324091950454](../images/image-20200324091950454.png)
 
 
 

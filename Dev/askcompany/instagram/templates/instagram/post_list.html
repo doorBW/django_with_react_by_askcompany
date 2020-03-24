@@ -1,3 +1,4 @@
+{% load bootstrap4 %}
 <!doctype html>
 <html lang="ko">
 <head>
@@ -32,8 +33,9 @@
         </tbody>
     </table>
 
-    {{ is_paginated }}
-    {{ page_obj }}
+    {% if is_paginated %}
+        {% bootstrap_pagination page_obj size="small" justify_content="center" %}
+    {% endif %}
     
 </body>
 </html>
