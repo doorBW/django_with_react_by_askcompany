@@ -295,4 +295,81 @@ pip install django-bootstrap4
 
 
 
-09- 뷰 장식자
+**09- 뷰 장식자(View Decorator)**
+
+장식자(Decorator)
+
+어떤 함수를 감싸는 (Wrapping) 함수
+
+골뱅이(@)를 통해 나타낸다.
+
+
+
+![image-20200324170258639](../images/image-20200324170258639.png)
+
+
+
+
+
+* **몇 가지 장고 기본 Decorators**
+
+**django.views.decorators.http**   
+
+   
+
+**django.contrib.auth.decorators**   
+
+user_passes_test: 지정함수가 False를 반환하면 login_url로 redirect   
+
+login_required   
+
+permission_required : 지정 퍼미션이 없을 때 login_url로 redirect   
+
+   
+
+**django.contrib.admin.views.decorators**   
+
+   
+
+
+
+* CBV에 장식자 입히기 \#1
+
+요청을 처리하는 함수를 Wrapping하기    
+
+![image-20200324171244742](../images/image-20200324171244742.png)
+
+
+
+* CBV에 장식자 입히기 \#2
+
+![image-20200324171411059](../images/image-20200324171411059.png)
+
+
+
+* CBV에 장식자 입히기 \#3
+
+![image-20200324171515339](../images/image-20200324171515339.png)
+
+
+
+->
+
+
+
+![image-20200324171836574](../images/image-20200324171836574.png)
+
+
+
+
+
+10- 장고 기본 CBV API (Generic date views)   
+
+
+
+11- 적절한 HTTP 상태코드로 응답하기   
+
+
+
+12- URL Reverse를 통해 유연하게 URL 생성하기   
+
