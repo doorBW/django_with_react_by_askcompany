@@ -363,9 +363,19 @@ permission_required : 지정 퍼미션이 없을 때 login_url로 redirect
 
 
 
-10- 장고 기본 CBV API (Generic date views)   
+**10- 장고 기본 CBV API (Generic date views)**   
+
+Generic Date Views -> 날짜 관련 view   
+
+![image-20200326000410408](../images/image-20200326000410408.png)
+
+   
+
+공통 옵션: allow_future(디폴트: False -> 현재시간 이후의 Record는 제외됨)   
 
 
+
+   
 
 11- 적절한 HTTP 상태코드로 응답하기   
 
