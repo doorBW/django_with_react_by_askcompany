@@ -439,9 +439,39 @@ REST API를 만들 때, 특히 유용하다.
 
 
 
+**12- URL Reverse를 통해 유연하게 URL 생성하기**   
+
+* URL Dispatcher
+
+urls.py변경만으로 "각 뷰에 대한 URL"이 변경되는 유연한 URL 시스템   
+
+* URL Reverse
+
+URL이 변경되더라도, URL Reverse가 변경된 URL을 추적   
+
+   
+
+* URL Reverse를 수행하는 4가지 함수(1)
+
+url 템플릿 태그   
+
+reverse 함수   
+
+resolve_url 함수   
+
+redirect 함수   
+
+* URL Reverse를 수행하는 4가지 함수(2)
+
+![image-20200326101057757](../images/image-20200326101057757.png)
+
+   
 
 
 
+* 실습
 
-12- URL Reverse를 통해 유연하게 URL 생성하기   
+![image-20200326102637317](../images/image-20200326102637317.png)
+
+
 

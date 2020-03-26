@@ -26,7 +26,9 @@
                         {% endif %}
                     </td>
                     <td>
-                        {{ post.message }}
+                        <a href="{{ post.get_absolute_url }}">
+                            {{ post.message }}
+                        </a>
                     </td>
                 </tr>
             {% endfor %}
