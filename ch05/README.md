@@ -1,5 +1,5 @@
 # ch05) 웹 프론트엔드 기초 및 장고 static
-**01- Overview**
+**01- Overview **  
 
 * 웹 프론트엔드를 위한 3가지 언어
 
@@ -21,7 +21,44 @@ JavaScript
 
    
 
-02- CSS Layout (1)
+**02- CSS Layout (1) **  
+
+과거에는 Table for Layout -> 지금은 CSS for Layout   
+
+   
+
+**반응형 웹**
+
+브라우저의 가로크기에 따라 각기 다른 CSS 스타일을 적용   
+
+CSS Media Queries를 통해 구현   
+
+![image-20200326232952297](../images/image-20200326232952297.png)
+
+   
+
+**CSS Frameworks of 2019**   
+
+1. Bootstrap
+2. Materialize CSS
+3. Semantic UI
+4. Material UI
+5. UIKit
+6. Foundation
+
+   
+
+**CDN**   
+
+최적화된 전세계적으로 촘촘히 분산된 서버로 이루어진 플랫폼   
+
+전 세계의 유저에게 빠르고 안전한 정적파일 전송   
+
+우리는 하나의 원본(Origin)서버를 가지고, CDN 서비스 업체에서는 전 세계에 걸쳐 컨텐츠 서버를 가지고 있고, 원본 서버로부터 각 컨텐츠 서버로 데이터를 복제한다.   
+
+전 세계의 유저들이 동일한 주소로 컨텐츠를 요청하면, CDN서비스에서는 이 요청을 해당 유저와 물리적으로 가까운 CDN 콘텐츠 서버에서 응답토록 구성한다.   
+
+
 
 
 
