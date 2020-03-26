@@ -62,7 +62,11 @@ CSS Media Queries를 통해 구현
 
 
 
-03- CSS Layout (2)
+**03- CSS Layout (2)**   
+
+bootstrap cdn 적용 등 실습 위주..   
+
+
 
 
 
