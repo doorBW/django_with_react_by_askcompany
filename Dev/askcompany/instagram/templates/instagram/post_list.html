@@ -6,7 +6,11 @@
 {% endblock title %}
 
 {% block content %}
-
+    <script>
+        if(1 > 0){
+            console.log("hello!");
+        }
+    </script>
     <form action="" method="get">
         <input type="text" name="q" value="{{ q }}" />
         <input type="submit" value="검색" />

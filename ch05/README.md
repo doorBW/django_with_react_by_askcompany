@@ -70,9 +70,17 @@ bootstrap cdn 적용 등 실습 위주..
 
 
 
-04- JavaScript와 jQuery
+**04- JavaScript와 jQuery**   
 
+* 소개할 기능   
 
+1. Event Listener 등록
+2. DOM 엘리먼트 추가/제거
+3. Ajax GET/POST 요청
+
+   
+
+   
 
 05- 휴대폰 망을 통해 로컬 개발서버에 접속하는 방법
 
