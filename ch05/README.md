@@ -104,5 +104,23 @@ viewport meta태그를 이용해 모바일에서 스케일조정..
 
    
 
-06- 장고가 static 파일을 다루는 방법
+**06- 장고가 static 파일을 다루는 방법**    
+
+* static 파일.  
+
+개발 리소스로서의 정적인 파일(js, css, image 등).   
+
+앱/프로젝트 단위로 저장/서빙   
+
+   
+
+장고는 One Project, Multi App 구조이다. 하나의 App을 위한 static 파일을 app/static/app 경로에 둔다.   
+
+python manage.py collectstatic   
+
+위와 같은 명령어를 통해 여러 디렉토리로 나눠진 static파일들을 이 경로의 디렉토리로 복사하여, 서빙한다. -> 배포에서만 의미가 있는 설정    
+
+   
+
+
 
