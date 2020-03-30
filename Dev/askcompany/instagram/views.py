@@ -2,10 +2,24 @@ from django.utils.decorators import method_decorator
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import ListView, DetailView, ArchiveIndexView, YearArchiveView
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse, HttpRequest, Http404
 from .models import Post
+from .forms import PostForm
 # Create your views here.
+
+def post_new(request):
+    if request.method == 'POST':
+        form = PostForm(request.POST)
+        if form.is_valid():
+            post = form.save()
+            return redirect(post)
+    else:
+        form = PostForm()
+
+    return render(request, 'instagram/post_form.html',{
+        'form': form
+    })
 
 # post_list = login_required(ListView.as_view(model=Post, paginate_by=10))
 

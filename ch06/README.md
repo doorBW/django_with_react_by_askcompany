@@ -99,7 +99,28 @@ Content-Length, Content-Type, Content-Disposition 헤더 자동 지정.
 
    
 
-03- Form
+**03- Form**    
+
+장고를 더욱 장고스럽게 만들어주는 주옥같은 Feature.   
+
+주요역할!    
+
+- 입력폼 HTML 생성
+- 입력폼 값에 대한 유효성 검증 (Validation) 및 값 변환
+- 검증을 통과한 값들을 dict형태로 제공
+
+   
+
+* Django 스타일의 Form 처리 (1)
+
+하나의 URL(하나의 View)에서 2가지 역할을 모두 수행.   
+
+1. 빈 폼을 보여주는 역할과(GET)
+2. 폼을 통해 입력된 값을 검증하고 저장하는 역할(POST)
+
+   
+
+![image-20200330150411713](../images/image-20200330150411713.png)
 
    
 

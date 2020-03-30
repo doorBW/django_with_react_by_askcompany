@@ -28,6 +28,7 @@ class PostAdmin(admin.ModelAdmin):
 
     search_fields = ['message']
     list_filter = ['created_at', 'is_public']
+    # form = PostForm
 
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):
