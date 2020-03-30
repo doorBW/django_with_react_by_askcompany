@@ -45,7 +45,57 @@ request.FILES (POST 에서만 사용 가능)
 
    
 
-02- HttpRequest와 HttpResponse
+**02- HttpRequest와 HttpResponse**   
+
+* HttpRequest 객체
+
+클라이언트로부터의 모든 요청 내용을 담고 있다.    
+
+함수 기반 뷰: 매 요청 시마다 뷰 함수의 첫번째 인자 request로 전달.   
+
+클래스 기반 뷰: 매 요청 시마다 self.request를 통해 접근.   
+
+* Form 처리 관련 속성들
+
+.method: 요청의 종류 "GET" 또는 "POST"로서 모두 대문자.   
+
+.GET: GET인자 목록(QueryDict타입).   
+
+.POST: POST인자 목록(QueryDict타입).   
+
+.FILES: POST인자 목록(MultiValueDict타입).   
+
+   
+
+* MultiValueDict: 동일 Key 다수 Value.   
+
+   
+
+* HttpResponse
+
+다양한 응답을 Wrapping: HTML문자열, 이미지 등등,,,   
+
+View에서는 반환값으로 HttpResponse 객체를 기대.   
+
+   
+
+* JsonResponse
+
+
+
+* StreamingHttpResponse
+
+효율적인, 큰(긴) 응답을 위한 것.(혹은 메모리를 많이 먹는 응답).   
+
+-> iterator를 통해 큰 응답을 잘라서 처리하는 것.   
+
+
+
+* FileResponse
+
+StreamingHttpResponse를 상속 받는다.   
+
+Content-Length, Content-Type, Content-Disposition 헤더 자동 지정.   
 
    
 
