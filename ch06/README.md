@@ -124,7 +124,35 @@ Content-Length, Content-Type, Content-Disposition 헤더 자동 지정.
 
    
 
-04- Cross Site Request Forgery
+**04- Cross Site Request Forgery**
+
+CSRF 공격: 사용자가 의도하지 않게 게시판에 글을 작성하거나, 쇼핑을 하게 하는 등의 공격   
+
+-> 공격을 막기 위해 Token을 통한 체크(POST요청에 한해 CsrfViewMiddleware를 통한 체크)   
+
+![image-20200402000857738](../images/image-20200402000857738.png)
+
+위와 같이 csrf_token을 이용하면 된다.   
+
+CSRF Token 는 유저인증Token 이나 JWT(JSON Web Token)이 아니다.   
 
    
+
+CSRF Token 기능은 끄지않는다!!!   
+
+앱 API에서는 끈다..!   
+
+django-rest-framework의 APIView에서는 csrf_exempt가 적용되어있다.    
+
+   
+
+05- ModelForm   
+
+06- Form Validation   
+
+07- Messages Framework   
+
+08- Form을 통한 삭제 구현   
+
+09- 장고 기본 CBV API (Generic editing views)   
 
