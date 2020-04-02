@@ -166,7 +166,41 @@ instance.save를 지연시키고자 할 때, commit=False를 사용한다.
 
    
 
-06- Form Validation   
+**06- Form Validation**   
+
+* Form 유효성 검사가 수행되는 시점
+
+form.is_valid() # 이 시점에 유효성 검사가 수행된다.   
+
+-> 호출 시 내부 로직   
+
+1. form.full_clean() 호출, 각 필드객체.clena() 호출을 통해 각 필드 Type에 맞춰서 유효성 검사를 하고 필드 이름 별로, Form객체.clean_필드명() 함수가 있다면 호출해서 유효성검사를 하고 Form객체.clean() 함수가 있다면 호출해서 유효성 검사를 한다.
+2. 에러 유무에 따른 True/False 리턴
+
+
+
+* Form에서 수행하는 2가지 유효성 검사
+
+1. Validator 함수를 통한 유효성 검사
+2. Form 클래스 내 clean, clean_멤버함수를 통한 유효성 검사 및 값 변경
+
+![image-20200402181420277](../images/image-20200402181420277.png)
+
+   
+
+* Validator
+
+함수형/클래스형 Validator   
+
+**함수형**: 유효성 검사를 수행할 값 인자를 1개 받은 Callable Object   
+
+**클래스형**: 클래스의 인스턴스가 Callable Object   
+
+   
+
+![image-20200402182143145](../images/image-20200402182143145.png)
+
+​    
 
 07- Messages Framework   
 
