@@ -146,7 +146,25 @@ django-rest-framework의 APIView에서는 csrf_exempt가 적용되어있다.
 
    
 
-05- ModelForm   
+**05- ModelForm**   
+
+장고 Form을 상속, 지정된 Model로부터 필드정보를 읽어들여, Form Fields를 세팅한다.   
+
+내부적으로 Model Instance를 유지한다.   
+
+* form.save(commit=True)   
+
+commit 값의 디폴트는 True   
+
+form.save != instance.save   
+
+instance.save를 지연시키고자 할 때, commit=False를 사용한다.   
+
+![image-20200402174636602](../images/image-20200402174636602.png)
+
+
+
+   
 
 06- Form Validation   
 
