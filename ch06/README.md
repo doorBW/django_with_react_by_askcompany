@@ -240,11 +240,17 @@ View를 통해 화면에도 노출시킬 수 있다.(JS를 이용할 수도 있�
 
 ![image-20200403210723882](../images/image-20200403210723882.png)
 
-
-
    
 
-08- Form을 통한 삭제 구현   
+**08- Form을 통한 삭제 구현**   
+
+![image-20200403215003193](../images/image-20200403215003193.png)
+
+위와 같이 post_delete 함수를 구현해서 삭제 처리.   
+
+post_confirm_delete.html을 새로 만들어 주어서 해당 템플릿에서 삭제 확인을 하면 post로 요청해서 삭제처리된다.   
+
+   
 
 09- 장고 기본 CBV API (Generic editing views)   
 
