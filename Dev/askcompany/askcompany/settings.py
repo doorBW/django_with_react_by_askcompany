@@ -145,3 +145,10 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 INTERNAL_IPS = ['127.0.0.1']
 
 AUTH_USER_MODEL = 'auth.USER'
+
+from django.contrib.messages import constants as messages_constants
+
+MESSAGE_TAGS = {
+    messages_constants.DEBUG: 'secondary',
+    messages_constants.ERROR: 'danger',
+}

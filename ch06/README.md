@@ -202,7 +202,47 @@ form.is_valid() # 이 시점에 유효성 검사가 수행된다.
 
 ​    
 
-07- Messages Framework   
+**07- Messages Framework**   
+
+* Messages Framework
+
+현재 User를 위한 1회성 메시지를 담는 용도이다. HttpRequest 인스턴스를 통해 메시지를 남긴다. 즉, View에서만 사용가능.   
+
+View를 통해 화면에도 노출시킬 수 있다.(JS를 이용할 수도 있다.)   
+
+* Message Levels를 통한 메시지 분류
+
+파이썬 로깅 모듈의 Level을 차용한 것.   
+
+레벨에 따라 로깅 여부 판단. 혹은 템플릿에서 다른 스타일로 노출.   
+
+레벨 종류   
+
+* DEBUG: 
+* INFO: 해당 유저에 대한 정보성 메시지 # 디폴트
+* SUCCESS: 액션이 성공적으로 수행됨
+* WARNING: 실패가 아직 발생하지는 않았지만, 임박했다.
+* ERROR: 액션이 수행되지 않았거나 다른 실패가 발생함.
+
+   
+
+* 근데 레이아웃에서 messages를 쓸때, views함수에서 딕셔너리로 같이 안넘겨줘도 어떻게 쓸수있냐??
+
+=> context_processors를 통해 접근한다!   
+
+* context_processors
+
+템플릿 기본 로딩 변수목록을 생성해주는 함수 목록!   
+
+![image-20200403210608332](../images/image-20200403210608332.png)
+
+* 메세지 출력 태그 이름 바꾸기!
+
+![image-20200403210723882](../images/image-20200403210723882.png)
+
+
+
+   
 
 08- Form을 통한 삭제 구현   
 
