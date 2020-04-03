@@ -252,5 +252,18 @@ post_confirm_delete.html을 새로 만들어 주어서 해당 템플릿에서 �
 
    
 
-09- 장고 기본 CBV API (Generic editing views)   
+**09- 장고 기본 CBV API (Generic editing views)**   
 
+![image-20200403215154640](../images/image-20200403215154640.png)
+
+   
+
+* CreateView: 주석은 함수기반뷰, 그 아래는 클래스 기반뷰
+
+![image-20200403225548205](../images/image-20200403225548205.png)
+
+   
+
+
+
+   
