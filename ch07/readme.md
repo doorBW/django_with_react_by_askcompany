@@ -39,6 +39,20 @@ AuthenticationForm 이 클래스를 상속 받아서 퀴즈 만듦!
 
    
 
-06- 회원가입하자마자 로그인하기.   
+**06- 회원가입하자마자 로그인하기.**   
+
+![image-20200407212230084](../images/image-20200407212230084.png)
+
+위와 같이 기존의 CreateView를 상속받아서 처리해야 한다.   
+
+실제 장고쪽의 로그인 코드를 보면    
+
+from django.contrib.auth import get_user_model, login as auth_login    
+
+와 같이 login을 import 해서 해당 함수로 실제 로그인 처리를 함을 알 수 있다.    
+
+따라서 동일하게 import 하여 사용한다.    
+
+   
 
 07- 로그아웃 처리.   
