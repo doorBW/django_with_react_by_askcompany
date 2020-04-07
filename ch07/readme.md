@@ -31,7 +31,13 @@ AuthenticationForm 이 클래스를 상속 받아서 퀴즈 만듦!
 
    
 
-05- 회원가입.   
+**05- 회원가입.**   
+
+장고 user app에 UserCreationForm이 있다.   
+
+![image-20200407211311384](../images/image-20200407211311384.png)
+
+   
 
 06- 회원가입하자마자 로그인하기.   
 
