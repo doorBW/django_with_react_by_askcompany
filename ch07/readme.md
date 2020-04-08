@@ -55,4 +55,12 @@ from django.contrib.auth import get_user_model, login as auth_login
 
    
 
-07- 로그아웃 처리.   
+**07- 로그아웃 처리.**   
+
+next_page인자를 이용해서, 로그아웃 이후에 어느 화면으로 갈지 설정해둘 수 있다.   
+
+또는 LOGOUT_REDIRECT_URL을 settings.py에 설정해둘 수 있음.   
+
+next인자는 로그인/로그아웃화면 이후 어느 화면으로 갈지를 미리 설정해두는 것.   
+
+   

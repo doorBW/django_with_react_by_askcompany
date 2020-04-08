@@ -72,5 +72,5 @@ signup = SignupView.as_view()
 # def signup(request):
 #     pass
 
-def logout(request):
-    pass
+# def logout(request):
+#     pass
