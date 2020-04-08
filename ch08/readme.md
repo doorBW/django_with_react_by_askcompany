@@ -11,7 +11,19 @@ SPA: Single Page Application -> HTML/CSS/JavaScript의 비중이 커진다.
 
    
 
-02- 프로젝트 생성 및 초기 프로젝트 환경 설정   
+**02- 프로젝트 생성 및 초기 프로젝트 환경 설정**   
+
+새로운 가상환경세팅   
+
+conda create --name=django-with-react-rev2 python=3.8   
+
+   
+
+장고 환경 구성에 있어서, requirements와 settings를 개발/운영으로 나누어 만들어 두었음.   
+
+이때 settings 변경에 따라 manage.py, asgi.py, wsgi.py 세가지 파일에서 기존의 settings.py 보는 경로를 수정해주어야함.   
+
+   
 
 03- Bootstrap4를 활용한 기본 레이아웃 구현   
 
