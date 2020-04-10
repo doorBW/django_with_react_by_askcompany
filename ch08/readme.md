@@ -53,7 +53,21 @@ Forms 에서 Meta를 작성할때, UserCreationForm의 Meta를 오버라이트�
 
    
 
-05- 회원 가입 환영 이메일 보내기   
+**05- 회원 가입 환영 이메일 보내기**   
+
+방법#1) 장고 기본의 send_mail API 활용(SMTP).   
+
+-> sendgrid에서 제공하는 방법을 활용.(https://sendgrid.com/docs/for-developers/sending-email/django/).   
+
+방법#2) django-sendgrid-v5 활용하여, 전용 WEB API 활용.   
+
+   
+
+아래와 같이 templates에 txt파일에도 인자를 던질 수 있다.   
+
+![image-20200410170533052](../images/image-20200410170533052.png)
+
+​    
 
 06- SendGrid API Key  획득하고 환경변수에 저장하기   
 
