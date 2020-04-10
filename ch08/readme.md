@@ -25,7 +25,13 @@ conda create --name=django-with-react-rev2 python=3.8
 
    
 
-03- Bootstrap4를 활용한 기본 레이아웃 구현   
+**03- Bootstrap4를 활용한 기본 레이아웃 구현**   
+
+bootstrap4를 다운받아서 프로젝트 폴더 static에 넣어줌.    
+
+-> bootstrap4를 이용하여 기본 레이아웃(layout.html) 구현.   
+
+   
 
 04- 커스텀 유지 저징 및 회원가입 구현   
 
