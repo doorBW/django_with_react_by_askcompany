@@ -40,9 +40,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # Third Apps
+    'bootstrap4',
     'debug_toolbar',
     # Locals Apps
-
+    'accounts',
 ]
 
 MIDDLEWARE = [
@@ -88,6 +89,8 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
+AUTH_USER_MODEL = "accounts.User"
 
 
 # Password validation

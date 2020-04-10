@@ -33,7 +33,25 @@ bootstrap4를 다운받아서 프로젝트 폴더 static에 넣어줌.
 
    
 
-04- 커스텀 유지 저징 및 회원가입 구현   
+**04- 커스텀 유지 저징 및 회원가입 구현**   
+
+* 회원가입 구현.   
+
+1. 커스텀 유저.   
+
+signupform을 이용하여 회원가입 구현.   
+
+-> UserCreationForm 을 이용하여 패스워드가 암호화 된 후 저장되도록 함.   
+
+2. 아이디/암호/이메일/이름.   
+
+Forms 에서 Meta를 작성할때, UserCreationForm의 Meta를 오버라이트하기위해 UserCreationForm.Meta를 상속받아서 진행한다.   
+
+아래는 forms.py    
+
+![image-20200410151708730](../images/image-20200410151708730.png)
+
+   
 
 05- 회원 가입 환영 이메일 보내기   
 
