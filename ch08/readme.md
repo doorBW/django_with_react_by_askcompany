@@ -91,5 +91,31 @@ from django.contrib.auth import login as auth_login 을 통해서 signup 함수�
 
    
 
-08- django-pydenticon을 활용하여 프로필 디폴트 이미지 구현   
+**08- django-pydenticon을 활용하여 프로필 디폴트 이미지 구현**   
+
+Identicons 활용!   
+
+-> 장고에서는 여기, https://github.com/azaghal/django-pydenticon.   
+
+현재 해당 라이브러리의 url patterns에 오류가 있어서, views를 가져와 따로 사용한다.!    
+
+![image-20200412183621303](../images/image-20200412183621303.png)
+
+   
+
+09- 프로필 수정 구현과 장고3에서 추가된 TextChoices 활용
+
+10- auth앱의 PasswordChangeForm 커스텀을 통한 암호 수정 구현
+
+11- instagram 앱 생성과 포스팅 쓰기 구현
+
+12- instagram post_detail 뷰 구현
+
+13- 유저 페이지 구현
+
+14- easy-thumbnails를 활용한 유저페이지 썸네일 처리 구현
+
+15- Timeline sidebar 템플릿 및 스타일 구현
+
+16- User 모델에 Follow-Unfollow 관계 필드를 구현하고, Follow 기능 구현
 
