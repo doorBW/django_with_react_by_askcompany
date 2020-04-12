@@ -75,7 +75,21 @@ Sendgrid api key를 획득하는 방법에 대해서...
 
    
 
-07- 로그인-로그아웃 구현 그리고 회원 가입과 동시에 로그인   
+**07- 로그인-로그아웃 구현 그리고 회원 가입과 동시에 로그인**   
+
+from django.contrib.auth.views import LoginView   
+
+위를 통해 LoginView 라는 클래스기반 뷰를 이용한다.   
+
+이후 로그아웃 기능 구현.   
+
+-> 로그아웃과 동시에 로그인 화면으로 가기 위해 logout_then_login 이라는 CBV이용.   
+
+이후 회원가입과 동시에 로그인 기능 구현.   
+
+from django.contrib.auth import login as auth_login 을 통해서 signup 함수에서 user저장 후 로그인 처리.   
+
+   
 
 08- django-pydenticon을 활용하여 프로필 디폴트 이미지 구현   
 
