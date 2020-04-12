@@ -69,7 +69,11 @@ Forms 에서 Meta를 작성할때, UserCreationForm의 Meta를 오버라이트�
 
 ​    
 
-06- SendGrid API Key  획득하고 환경변수에 저장하기   
+**06- SendGrid API Key  획득하고 환경변수에 저장하기**   
+
+Sendgrid api key를 획득하는 방법에 대해서...    
+
+   
 
 07- 로그인-로그아웃 구현 그리고 회원 가입과 동시에 로그인   
 
