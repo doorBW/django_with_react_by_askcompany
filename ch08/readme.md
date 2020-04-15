@@ -103,9 +103,33 @@ Identicons 활용!
 
    
 
-09- 프로필 수정 구현과 장고3에서 추가된 TextChoices 활용
+**09- 프로필 수정 구현과 장고3에서 추가된 TextChoices 활용**   
 
-10- auth앱의 PasswordChangeForm 커스텀을 통한 암호 수정 구현
+![image-20200415164418839](../images/image-20200415164418839.png)
+
+   
+
+파일 업로드 구현.(위 코드의 avatar 필드)   
+
+
+
+**10- auth앱의 PasswordChangeForm 커스텀을 통한 암호 수정 구현**    
+
+장고 auth를 보면 PasswordChangeView 등이 있다.   
+
+PasswordChangeForm은 SetPasswordForm을 상속 받고 있다.   
+
+![image-20200415170312153](../images/image-20200415170312153.png)
+
+위와 같이 구현하여 암호변경을 완성. 근데 기존암호와 새로운암호를 동일하게 해도 정상적으로 넘어가진다.   
+
+이런걸 변경하기 위해서는 상속받은 것을 수정해줘야 함!   
+
+![image-20200415171331010](../images/image-20200415171331010.png)
+
+위와 같이 PasswordChangeForm을 AuthPasswordChangeForm이라는 이름으로 가져와서 내부 clean_new_password2 함수를 새로 정의해주었다.   
+
+   
 
 11- instagram 앱 생성과 포스팅 쓰기 구현
 
