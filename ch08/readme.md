@@ -131,7 +131,27 @@ PasswordChangeForm은 SetPasswordForm을 상속 받고 있다.
 
    
 
-11- instagram 앱 생성과 포스팅 쓰기 구현
+**11- instagram 앱 생성과 포스팅 쓰기 구현**   
+
+포스팅 쓰기 구현 -> 사진1장, caption과 태그 쓰기, location.   
+
+![image-20200415175239893](../images/image-20200415175239893.png)
+
+Forms 구현에서 widgets를 통해 스타일을 바꿀 수 있다.    
+
+   
+
+caption 내용에 \#으로 담긴 태그를 빼와서 실제 tag_set에 넣어주자!   
+
+![image-20200415180447989](../images/image-20200415180447989.png)
+
+정규표현식을 이용해서 extract_tag_list 함수 구현!   
+
+이를 이용한 포스팅쓰기 함수.   
+
+![image-20200415181026478](../images/image-20200415181026478.png)
+
+   
 
 12- instagram post_detail 뷰 구현
 
