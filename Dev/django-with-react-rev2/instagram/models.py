@@ -1,6 +1,7 @@
 from django.db import models
 # from accounts.models import User # 이거보단 아래처럼!
 from django.conf import settings
+from django.urls import reverse
 import re
 
 class Post(models.Model):
@@ -21,8 +22,9 @@ class Post(models.Model):
             tag_list.append(tag)
         return tag_list
 
-    # def get_absolute_url(self):
-    #     return reverse("", kwargs={"pk": self.pk})
+    def get_absolute_url(self):
+        # return reverse("instagram:post_detail", kwargs={"pk": self.pk})
+        return reverse("instagram:post_detail", args=[self.pk])
 
 class Tag(models.Model):
     name = models.CharField(max_length=50, unique=True)
