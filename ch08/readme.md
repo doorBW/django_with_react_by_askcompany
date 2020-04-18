@@ -103,7 +103,19 @@ Identicons 활용!
 
    
 
-09- 프로필 수정 구현과 장고3에서 추가된 TextChoices 활용
+**09- 프로필 수정 구현과 장고3에서 추가된 TextChoices 활용**   
+
+CharField 필드에서 choices옵션을 줄 수 있다.   
+
+-> 장고3버전부터는 TextChoices 클래스를 만들어서 설정할 수 있다.   
+
+![image-20200415000253816](../images/image-20200415000253816.png)
+
+   
+
+이후 사진 업로드까지 구현.    
+
+   
 
 10- auth앱의 PasswordChangeForm 커스텀을 통한 암호 수정 구현
 
