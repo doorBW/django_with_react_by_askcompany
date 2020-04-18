@@ -111,15 +111,53 @@ CharField 필드에서 choices옵션을 줄 수 있다.
 
 ![image-20200415000253816](../images/image-20200415000253816.png)
 
-   
-
 이후 사진 업로드까지 구현.    
 
+![image-20200415164418839](../images/image-20200415164418839.png)
+
+파일 업로드 구현.(위 코드의 avatar 필드)   
+
+
+
+**10- auth앱의 PasswordChangeForm 커스텀을 통한 암호 수정 구현**    
+
+장고 auth를 보면 PasswordChangeView 등이 있다.   
+
+PasswordChangeForm은 SetPasswordForm을 상속 받고 있다.   
+
+![image-20200415170312153](../images/image-20200415170312153.png)
+
+위와 같이 구현하여 암호변경을 완성. 근데 기존암호와 새로운암호를 동일하게 해도 정상적으로 넘어가진다.   
+
+이런걸 변경하기 위해서는 상속받은 것을 수정해줘야 함!   
+
+![image-20200415171331010](../images/image-20200415171331010.png)
+
+위와 같이 PasswordChangeForm을 AuthPasswordChangeForm이라는 이름으로 가져와서 내부 clean_new_password2 함수를 새로 정의해주었다.   
+
    
 
-10- auth앱의 PasswordChangeForm 커스텀을 통한 암호 수정 구현
+**11- instagram 앱 생성과 포스팅 쓰기 구현**   
 
-11- instagram 앱 생성과 포스팅 쓰기 구현
+포스팅 쓰기 구현 -> 사진1장, caption과 태그 쓰기, location.   
+
+![image-20200415175239893](../images/image-20200415175239893.png)
+
+Forms 구현에서 widgets를 통해 스타일을 바꿀 수 있다.    
+
+   
+
+caption 내용에 \#으로 담긴 태그를 빼와서 실제 tag_set에 넣어주자!   
+
+![image-20200415180447989](../images/image-20200415180447989.png)
+
+정규표현식을 이용해서 extract_tag_list 함수 구현!   
+
+이를 이용한 포스팅쓰기 함수.   
+
+![image-20200415181026478](../images/image-20200415181026478.png)
+
+   
 
 12- instagram post_detail 뷰 구현
 
