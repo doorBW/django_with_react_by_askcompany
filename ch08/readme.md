@@ -181,7 +181,11 @@ Easy-thumnails 라이브러리 활용.
 
    
 
-15- Timeline sidebar 템플릿 및 스타일 구현
+**15- Timeline sidebar 템플릿 및 스타일 구현**   
+
+부트스트랩을 이용해 스타일 구현.   
+
+   
 
 16- User 모델에 Follow-Unfollow 관계 필드를 구현하고, Follow 기능 구현
 
