@@ -175,7 +175,11 @@ User_page 구현.
 
    
 
-14- easy-thumbnails를 활용한 유저페이지 썸네일 처리 구현
+**14- easy-thumbnails를 활용한 유저페이지 썸네일 처리 구현**   
+
+Easy-thumnails 라이브러리 활용.   
+
+   
 
 15- Timeline sidebar 템플릿 및 스타일 구현
 
