@@ -221,7 +221,13 @@ for문에서 empty 구문 사용가능.
 
    
 
-17- Timeline에 Follow하는 유저들의 포스팅 만을 노출   
+**17- Timeline에 Follow하는 유저들의 포스팅 만을 노출**   
+
+filter 등에서 OR 조건 사용하기 -> from django.db.models import Q   
+
+![image-20200420210238661](../images/image-20200420210238661.png)
+
+   
 
 18- 유저페이지에서 Unfollow 구현
 
