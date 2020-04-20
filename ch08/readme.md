@@ -229,7 +229,13 @@ filter 등에서 OR 조건 사용하기 -> from django.db.models import Q
 
    
 
-18- 유저페이지에서 Unfollow 구현
+**18- 유저페이지에서 Unfollow 구현**   
+
+![image-20200420212148067](../images/image-20200420212148067.png)
+
+is_follow 를 통해, 각 유저 페이지에 해당 인원에 대한 팔로우 언팔로우 기능 구현.   
+
+   
 
 19- Timeline 포스팅 목록 조건에 날짜 범위 지정하기
 
@@ -240,3 +246,4 @@ filter 등에서 OR 조건 사용하기 -> from django.db.models import Q
 22- 자바스크립트없이 포스팅 화면에서 댓글 쓰기
 
 23- 장고 위주로 jQuery를 통한 Ajax 댓글 쓰기 구현
+
