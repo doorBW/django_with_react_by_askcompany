@@ -187,5 +187,50 @@ Easy-thumnails 라이브러리 활용.
 
    
 
-16- User 모델에 Follow-Unfollow 관계 필드를 구현하고, Follow 기능 구현
+**16- User 모델에 Follow-Unfollow 관계 필드를 구현하고, Follow 기능 구현**   
 
+Follow 기능 구현 -> User모델에 ManyToMany필드 추가   
+
+![image-20200420194242592](../images/image-20200420194242592.png)
+
+위와 같이 "self" 를 통해서 자기 자신을 참조하게 한다.   
+
+```python manage.py sqlmigrate 앱이름```
+
+위 명령어를 통해서 migrate시 쿼리를 볼 수 있다.   
+
+![image-20200420194352392](../images/image-20200420194352392.png)
+
+   
+
+follow, unfollow 기능 구현.   
+
+![image-20200420200325790](../images/image-20200420200325790.png)
+
+   
+
+ORM코드로 팔로우 한 사람은 추천목록에 안보이게 하기!   
+
+![image-20200420200630881](../images/image-20200420200630881.png)
+
+   
+
+for문에서 empty 구문 사용가능.   
+
+![image-20200420200731977](../images/image-20200420200731977.png)
+
+   
+
+17- Timeline에 Follow하는 유저들의 포스팅 만을 노출   
+
+18- 유저페이지에서 Unfollow 구현
+
+19- Timeline 포스팅 목록 조건에 날짜 범위 지정하기
+
+20- 포스팅 좋아요-취소 구현
+
+21- 장고만으로 댓글 쓰기 구현
+
+22- 자바스크립트없이 포스팅 화면에서 댓글 쓰기
+
+23- 장고 위주로 jQuery를 통한 Ajax 댓글 쓰기 구현

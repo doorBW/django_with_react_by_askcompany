@@ -7,7 +7,12 @@ from .models import Tag, Post
 
 @login_required
 def index(request):
+    suggested_user_list = get_user_model().objects.all()\
+                        .exclude(pk=request.user.pk)\
+                        .exclude(pk__in=request.user.following_set.all())[:3] # 팔로우한 사람은 빼자! ORM 코드로 작성
+
     return render(request, "instagram/index.html",{
+        "suggested_user_list": suggested_user_list,
     })
 
 @login_required
