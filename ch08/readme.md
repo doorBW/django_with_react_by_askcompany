@@ -271,7 +271,13 @@ django.contrib.humanize 를 통해서 naturaltime 사용!
 
    
 
-22- 자바스크립트없이 포스팅 화면에서 댓글 쓰기
+**22- 자바스크립트없이 포스팅 화면에서 댓글 쓰기**   
+
+![image-20200426124730635](../images/image-20200426124730635.png)
+
+위와 같이 post_card html에서 comment_form을 보여준다.   
+
+   
 
 23- 장고 위주로 jQuery를 통한 Ajax 댓글 쓰기 구현
 

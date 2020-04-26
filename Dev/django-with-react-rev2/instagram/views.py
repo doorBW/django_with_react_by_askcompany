@@ -23,9 +23,11 @@ def index(request):
                         .exclude(pk=request.user.pk)\
                         .exclude(pk__in=request.user.following_set.all())[:3] # 팔로우한 사람은 빼자! ORM 코드로 작성
 
+    comment_form = CommentForm()
     return render(request, "instagram/index.html",{
         "post_list": post_list,
         "suggested_user_list": suggested_user_list,
+        "comment_form": comment_form,
     })
 
 @login_required
@@ -52,8 +54,10 @@ def post_new(request):
 
 def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
+    comment_form = CommentForm()
     return render(request, "instagram/post_detail.html", {
         "post": post,
+        "comment_form": comment_form,
     })
 
 @login_required
