@@ -279,5 +279,14 @@ django.contrib.humanize 를 통해서 naturaltime 사용!
 
    
 
-23- 장고 위주로 jQuery를 통한 Ajax 댓글 쓰기 구현
+**23- 장고 위주로 jQuery를 통한 Ajax 댓글 쓰기 구현**   
 
+jQuery 사용하기.   
+
+http://malsup.github.io/min/jquery.form.min.js 여기서 jquery 다운.   
+
+![image-20200426170142870](../images/image-20200426170142870.png)
+
+위와 같이 jquery를 이용하여 페이지 댓글쓰기 구현함.   
+
+   
