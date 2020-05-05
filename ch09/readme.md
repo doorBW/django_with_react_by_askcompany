@@ -39,7 +39,43 @@ Throttling(최대 호출 회수 제한).
 
    
 
-02- JSON 응답뷰 만들기
+**02- JSON 응답뷰 만들기**   
+
+Djangorestframework 설치 후 실습!   
+
+* 다양한 HTTP 클라이언트 프로그램
+
+유저가 웹브라우저를 통해 웹페이지 간 이동을 할 때,   
+
+웹 프론트엔드에서 JavaScript를 통한 호출.   
+
+Android/iOS 앱 코드를 통한 호출.   
+
+웹 요청 개발 프로그램을 통한 호출.   
+
+-> GUI 프로그램: Postman.   
+
+-> CLI 프로그램: cURL, HTTPie.   
+
+-> 라이브러리: requests.   
+
+이 중에 HTTPie를 사용해서 실습 진행!    
+
+![image-20200505154801771](../images/image-20200505154801771.png)
+
+   
+
+http --json POST 요청할주소 GET인자명==값 POST인자명=값   
+
+위와 같은 식으로 요청 방식, method, 인자 모두 컨트롤 가능함.    
+
+​    
+
+httpbin.org 사이트에 요청을 보내보면서 테스트해볼 수 있음!   
+
+![image-20200505155211441](../images/image-20200505155211441.png)
+
+   
 
 03- JSON 직렬화
 
