@@ -89,7 +89,21 @@ json/pickle 모두 파이썬 기본 라이브러리 -> 장고 타입(Model/Query
 
    
 
-04- APIView를 활용한 뷰 만들기
+**04- APIView를 활용한 뷰 만들기**   
+
+Serializer를 통한 뷰 처리 -> Form 처리와 유사한 방식으로 동작   
+
+![image-20200506205048510](../images/image-20200506205048510.png)
+
+위의 5개가 APIView class를 통해 이루어진다! -> APIVIew를 상속받아서 사용하면 직접 다 구현할 필요가 없다.    
+
+   
+
+![image-20200506210459415](../images/image-20200506210459415.png)
+
+위 3개가 다 같은 기능을 다른방법으로 구현해본 것.   
+
+   
 
 05- mixins 상속을 통한 APIView 로직 재사용
 

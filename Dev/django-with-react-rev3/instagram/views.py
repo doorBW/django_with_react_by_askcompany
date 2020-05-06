@@ -1,6 +1,9 @@
 from rest_framework import generics
 from django.shortcuts import render
 from rest_framework.viewsets import ModelViewSet
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework.decorators import api_view
 from .serializers import PostSerializer
 from .models import Post
 
@@ -22,6 +25,20 @@ class PostViewSet(ModelViewSet):
         return super().dispatch(request, *args, **kwargs)
 
 
-class PublicPostListAPIView(generics.ListCreateAPIView):
-    queryset = Post.objects.all() #filter(is_public=True)
-    serializer_class = PostSerializer
+# class PublicPostListAPIView(generics.ListAPIView):
+#     queryset = Post.objects.filter(is_public=True)
+#     serializer_class = PostSerializer
+
+# class PublicPostListAPIView(APIView):
+#     def get(self, request):
+#         qs = Post.objects.filter(is_public=True)
+#         serializer = PostSerializer(qs, many=True)
+#         return Response(serializer.data)
+
+# public_post_list = PublicPostListAPIView.as_view()
+
+@api_view(['GET'])
+def public_post_list(request):
+    qs = Post.objects.filter(is_public=True)
+    serializer = PostSerializer(qs, many=True)
+    return Response(serializer.data)
