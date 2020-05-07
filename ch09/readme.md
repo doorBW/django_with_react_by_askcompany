@@ -105,7 +105,29 @@ Serializer를 통한 뷰 처리 -> Form 처리와 유사한 방식으로 동작
 
    
 
-05- mixins 상속을 통한 APIView 로직 재사용
+**05- mixins 상속을 통한 APIView 로직 재사용**  
+
+* DRF에서 지원하는 mixins
+
+CreateModelMixin   
+
+ListModelMixin   
+
+RetrieveModelMixin   
+
+UpdateModelMixin   
+
+DestroyModelMixin   
+
+   
+
+APIView -> mixins -> Generics -> Viewset
+
+![image-20200507215150655](../images/image-20200507215150655.png)
+
+위와 같이 generic APIView는 mixins보다 심플하다!   
+
+  
 
 06- ViewSet과 Router
 
