@@ -129,7 +129,41 @@ APIView -> mixins -> Generics -> Viewset
 
   
 
-06- ViewSet과 Router
+**06- ViewSet과 Router**    
+
+ViewSet에서 list, retrieve 등.. 여러개를 이미 정의해두었기 때문에 일일이 만들 필요가 사라진다.   
+
+이후 router를 이용해서 urls를 등록한다.   
+
+![image-20200518195049148](../images/image-20200518195049148.png)
+
+   
+
+* ModelViewSet
+
+2가지 ModelViewSet   
+
+1. viewsets.ReadOnlyModelViewSet
+
+list지원 -> 1개의 URL   
+
+detail지원 -> 1개의 URL   
+
+2. viewsets.ModelViewSet
+
+list/create 지원 -> 1개의 URL   
+
+detail/update/partial_update/delete 지원 -> 1개의 URL   
+
+   
+
+* ViewSet에 새로운 EndPoint 추가하기
+
+![image-20200518205529362](../images/image-20200518205529362.png)
+
+   
+
+​    
 
 07- Renderer를 통한 다양한 응답 포맷 지원
 
